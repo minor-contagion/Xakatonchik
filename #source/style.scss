@@ -38,6 +38,12 @@ a {
     padding: 0 20px 0 58px;
 }
 
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
 .nav {
     display: flex;
     justify-content: space-between;
@@ -89,49 +95,133 @@ a {
     }
 }
 .hero{
-    background-image: url(img/background.png);
+    padding: 90px 0;
+    background-image: url(../img/background.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     .hero__container {
-        .btn__container {
-            display: flex;
-            gap: 6px;
-            align-items: center;
-            text-align: center;
-            .hero__container_btn {
-                padding: 3.5px 12.5px;
-                border-radius: 7px;
-                background-color: #000000;
-                a {
-                    font-family: 'Montserrat';
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 15px;
-                    line-height: 12px;
-                    letter-spacing: 0.025em;
-                    color: #fff;
-                }
-            }
-        }
         h1 {
             font-family: 'Montserrat';
             font-style: normal;
             font-weight: 600;
-            font-size: 24px;
+            font-size: 28px;
             line-height: 29px;
             letter-spacing: 0.025em;
-            color: #000000;
-            padding: 5px 0 10px 0;
+            color: #c6c3c3;
+            padding: 10px 30px;
+            background-color: #08318873;
+            display: inline;
+            border-radius: 15px;
         }
-        .calendar-wrapper {
-            width: 360px;
+        .calendar {
+            display: flex;
             margin: 3em auto;
-            padding: 2em;
-            border: 1px solid #dcdcff;
-            border-radius: 5px;
-            background: #fff;
-          }
-          
+            justify-content: flex-end;
+            gap: 125px;
+            .calendar-wrapper {
+                width: 360px;
+                padding: 2em;
+                border: 1px solid #dcdcff;
+                border-radius: 5px;
+                background: #e8e7e7;
+                table {
+                    clear: both;
+                    width: 100%;
+                    border: 1px solid #dcdcff;
+                    border-radius: 3px;
+                    border-collapse: collapse;
+                    color: #444;
+                  }
+                  td {
+                    height: 48px;
+                    text-align: center;
+                    vertical-align: middle;
+                    border-right: 1px solid #dcdcff;
+                    border-top: 1px solid #dcdcff;
+                    width: 14.28571429%;
+                  }
+                  thead td {
+                    border: none;
+                    color: #28283b;
+                    text-transform: uppercase;
+                    font-size: 22.5px;
+                  }
+                  td.not-current {
+                    color: #c0c0c0;
+                  }
+                  td.today {
+                    font-weight: 700;
+                    color: #28283b;
+                    font-size: 22.5px;
+                  }
+                  #btnPrev {
+                    float: left;
+                    margin-bottom: 20px;
+                  }
+                  #divCal {
+                    font-family: "Montserrat", sans-serif;
+                  }
+                  #btnPrev:before {
+                    font-family: "Montserrat", sans-serif;
+                    padding-right: 4px;
+                  }
+                  #btnNext {
+                    float: right;
+                    margin-bottom: 20px;
+                  }
+                  #btnNext:after {
+                    font-family: "Montserrat", sans-serif;
+                    padding-left: 4px;
+                  }
+                  #btnPrev,
+                  #btnNext {
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #979090;
+                    cursor: pointer;
+                    font-family: "Montserrat", sans-serif;
+                    text-transform: uppercase;
+                    transition: all 0.3s ease;
+                  }
+                  #btnPrev:hover,
+                    #btnNext:hover {
+                    color: #28283b;
+                    font-weight: bold;
+                    }
+              }
+            .calendar-description {
+                max-width: 300px;
+                max-height: 150px;
+                margin-right: 100px;
+                width: 360px;
+                background-color: #e8e7e7;
+                border-radius: 5.5px;
+                padding: 1.5em;
+
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 25px;
+                color: #4c4c4c;
+                font-family: "Montserrat", sans-serif;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .blue_circle, .red_circle {
+                    height: 10px;
+                    width: 10px;
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    span {
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
     }
 }
