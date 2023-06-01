@@ -14,8 +14,8 @@ function clock() {
     if (minutes <= 9) minutes = "0" + minutes;
     if (seconds <= 9) seconds = "0" + seconds;
     
-    date_time = "Сегодня - " + day + " " + month[month_num] + " " + d.getFullYear() +
-    " г.&nbsp;&nbsp;&nbsp;Текущее время - "+ hours + ":" + minutes + ":" + seconds;
+    date_time = day + " " + month[month_num] + " " + d.getFullYear() +
+    " г.&nbsp;&nbsp;&nbsp;"+ hours + ":" + minutes + ":" + seconds;
     if (document.layers) {
      document.layers.doc_time.document.write(date_time);
      document.layers.doc_time.document.close();

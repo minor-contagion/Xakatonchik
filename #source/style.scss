@@ -94,7 +94,26 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     .hero__container {
-        
+        .btn__container {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            text-align: center;
+            .hero__container_btn {
+                padding: 3.5px 12.5px;
+                border-radius: 7px;
+                background-color: #000000;
+                a {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 15px;
+                    line-height: 12px;
+                    letter-spacing: 0.025em;
+                    color: #fff;
+                }
+            }
+        }
         h1 {
             font-family: 'Montserrat';
             font-style: normal;
@@ -105,14 +124,14 @@ a {
             color: #000000;
             padding: 5px 0 10px 0;
         }
-        a {
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 15px;
-            line-height: 12px;
-            letter-spacing: 0.025em;
-            color: #000000;
-        }
+        .calendar-wrapper {
+            width: 360px;
+            margin: 3em auto;
+            padding: 2em;
+            border: 1px solid #dcdcff;
+            border-radius: 5px;
+            background: #fff;
+          }
+          
     }
 }

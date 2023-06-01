@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />  
 </head>
 <body>
     <header class="header">
@@ -45,14 +47,46 @@
                 <h1>
                     Планирование
                 </h1>
-                <a href="#">
-                    <span>Этот месяц</span>
-                </a>
-                <a href="#">
-                    <span>Этот год</span>
-                </a>
+                <div class="btn__container">
+                    <div class="hero__container_btn">
+                        <a href="#">
+                            <span>Этот месяц</span>
+                        </a>
+                    </div>
+                    <div class="hero__container_btn">
+                        <a href="#">
+                            <span>Этот год</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="calendar">
+                    <div id="calPeriod">
+                        <input id="calBack" type="button" value="&lt;">
+                        <select id="calMonth"></select>
+                        <input type="number" id="calYear">
+                        <input id="calNext" type="button" value="&gt;">
+                      </div>
+                      
+                      <!-- (B) CALENDAR -->
+                      <div id="calWrap"></div>
+                      
+                      <!-- (C) EVENT FORM -->
+                      <dialog id="calForm"><form method="dialog">
+                        <div id="evtClose">X</div>
+                        <h2>CALENDAR EVENT</h2>
+                        <label>Date</label>
+                        <input type="text" id="evtDate" readonly>
+                        <label>Details</label>
+                        <textarea id="evtTxt" required></textarea>
+                       
+                        <input id="evtDel" type="button" value="Delete">
+                        <input id="evtSave" type="submit" value="Save">
+                      </form></dialog>
+                </div>
             </div>
         </secttion>
     </main>
 </body>
+<script src="js/script.js"></script>
+<script src="js/index.js"></script>
 </html>
