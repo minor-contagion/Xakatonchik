@@ -41,47 +41,46 @@ a {
   top: 0;
   width: 100%;
 }
-
-.nav {
+.header .nav {
   display: flex;
   justify-content: space-between;
   padding-top: 12px;
   padding-bottom: 8px;
   border-bottom: 2px solid #000000;
 }
-.nav .logo {
+.header .nav .logo {
   padding-top: 6px;
 }
-.nav .realTime {
+.header .nav .realTime {
   padding-top: 8px;
 }
-.nav .realTime #time_now {
+.header .nav .realTime #time_now {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   line-height: 26px;
   font-size: 20px;
 }
-.nav .user_info {
+.header .nav .user_info {
   display: flex;
   justify-content: space-between;
   text-align: center;
 }
-.nav .user_info .user_info-logo {
+.header .nav .user_info .user_info-logo {
   max-block-size: 34px;
   justify-content: center;
 }
-.nav .user_info .user_info-block .user_info-block-text {
+.header .nav .user_info .user_info-block .user_info-block-text {
   display: flex;
   justify-content: space-between;
   text-align: center;
   max-width: 112px;
   max-height: 25px;
 }
-.nav .user_info .user_info-block .user_info-block-text .user_name {
+.header .nav .user_info .user_info-block .user_info-block-text .user_name {
   font-size: 10px;
 }
-.nav .user_info .user_info-block .user_info-block-text .info-block-images {
+.header .nav .user_info .user_info-block .user_info-block-text .info-block-images {
   display: flex;
   align-items: center;
 }
@@ -213,4 +212,18 @@ a {
 }
 .hero .hero__container .calendar .calendar-description .blue_circle span, .hero .hero__container .calendar .calendar-description .red_circle span {
   white-space: nowrap;
+}
+.hero .hero__container .user__info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px 14px;
+  background-color: rgba(255, 255, 255, 0.6980392157);
+  border-radius: 7px;
+  width: 400px;
+}
+.hero .hero__container .user__info .user__info_main {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
 }/*# sourceMappingURL=style.css.map */

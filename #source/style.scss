@@ -43,56 +43,56 @@ a {
     left: 0;
     top: 0;
     width: 100%;
-}
-.nav {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 12px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #000000;
-    .logo {
-        padding-top: 6px;
-    }
-    
-    .realTime {
-        padding-top: 8px; 
-        #time_now {
-            font-family: "Montserrat";
-            font-style: normal;
-            font-weight: 500;
-            line-height: 26px;
-            font-size: 20px;
-        }
-    }
-    
-    .user_info {
+    .nav {
         display: flex;
         justify-content: space-between;
-        text-align: center;
-        .user_info-logo {
-            max-block-size: 34px;
-            justify-content: center;
+        padding-top: 12px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #000000;
+        .logo {
+            padding-top: 6px;
         }
-        .user_info-block {
-            .user_info-block-text {
-                display: flex;
-                justify-content: space-between;
-                text-align: center;
-                max-width: 112px;
-                max-height: 25px;
-            
-                .user_name {
-                    font-size: 10px;
-                }
-            
-                .info-block-images{
+        
+        .realTime {
+            padding-top: 8px; 
+            #time_now {
+                font-family: "Montserrat";
+                font-style: normal;
+                font-weight: 500;
+                line-height: 26px;
+                font-size: 20px;
+            }
+        }
+        
+        .user_info {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            .user_info-logo {
+                max-block-size: 34px;
+                justify-content: center;
+            }
+            .user_info-block {
+                .user_info-block-text {
                     display: flex;
-                    align-items: center;
-            
+                    justify-content: space-between;
+                    text-align: center;
+                    max-width: 112px;
+                    max-height: 25px;
+                
+                    .user_name {
+                        font-size: 10px;
+                    }
+                
+                    .info-block-images{
+                        display: flex;
+                        align-items: center;
+                
+                    }
                 }
             }
         }
-    }
+    } 
 }
 .hero{
     padding: 90px 0;
@@ -221,6 +221,20 @@ a {
                         white-space: nowrap;
                     }
                 }
+            }
+        }
+        .user__info {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            padding: 16px 14px;
+            background-color: #FFFFFFB2;
+            border-radius: 7px;
+            width: 400px;
+            .user__info_main {
+                display: flex;
+                justify-content: space-between;
+                gap: 14px;
             }
         }
     }
