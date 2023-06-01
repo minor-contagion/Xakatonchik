@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -7,11 +11,65 @@
     box-sizing: border-box;
 }
 
-$maxWidth: 1140;
+$maxWidth: 1200;
 $widthAdapt: 570px;
 
 body {
     @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
     font-family: "", serif;
     font-weight: 400;
+}
+
+.container {
+    max-width: 1122px;
+    margin-left: 58px;
+    margin-right: 20px;
+
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #000000;
+
+}
+
+.logo {
+    padding-top: 6px;
+}
+
+.realTime {
+    padding-top: 8px;
+}
+
+.user_info {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.user_info-logo {
+    max-block-size: 34px;
+    justify-content: center;
+}
+
+.user_info-block-text {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    max-width: 112px;
+    max-height: 25px;
+
+    .user_name {
+        font-size: 10px;
+    }
+
+    .info-block-images{
+        display: flex;
+        align-items: center;
+
+    }
+    
 }
