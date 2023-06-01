@@ -11,7 +11,7 @@ html {
     box-sizing: border-box;
 }
 
-$maxWidth: 1200;
+$maxWidth: 1400px;
 $widthAdapt: 570px;
 
 body {
@@ -20,11 +20,17 @@ body {
     font-weight: 400;
 }
 
-.container {
-    max-width: 1122px;
-    margin-left: 58px;
-    margin-right: 20px;
+.btn-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
 
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px 0 58px;
 }
 
 .nav {
