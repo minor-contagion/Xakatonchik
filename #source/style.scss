@@ -39,7 +39,6 @@ body {
     padding-top: 12px;
     padding-bottom: 8px;
     border-bottom: 2px solid #000000;
-
 }
 
 .logo {
@@ -78,4 +77,10 @@ body {
 
     }
     
+}
+.hero {
+    background-image: url(img/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

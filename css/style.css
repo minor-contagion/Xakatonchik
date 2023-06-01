@@ -70,4 +70,11 @@ body {
 .user_info-block-text .info-block-images {
   display: flex;
   align-items: center;
+}
+
+.hero {
+  background-image: url(img/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }/*# sourceMappingURL=style.css.map */
