@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+$maxWidth: 1140;
+$widthAdapt: 570px;
