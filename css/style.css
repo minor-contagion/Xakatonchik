@@ -52,7 +52,7 @@ a {
   position: fixed;
   display: inline-block;
   margin-top: 2.5px;
-  margin-left: -32.5px;
+  margin-left: -50.5px;
   z-index: 101;
   cursor: pointer;
 }
@@ -337,7 +337,7 @@ a {
 }
 
 .hero {
-  padding: 90px 0;
+  padding: 100px 0;
   background-image: url(../img/background.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -360,8 +360,7 @@ a {
 .hero .hero__container .calendar {
   display: flex;
   margin: 3em auto;
-  justify-content: flex-end;
-  gap: 125px;
+  gap: 75px;
 }
 .hero .hero__container .calendar .calendar-wrapper {
   width: 360px;
@@ -385,6 +384,16 @@ a {
   border-right: 1px solid #dcdcff;
   border-top: 1px solid #dcdcff;
   width: 14.28571429%;
+}
+.hero .hero__container .calendar .calendar-wrapper tr:nth-child(2) td:nth-child(2) {
+  color: #0573DA;
+  font-size: 25px;
+  font-weight: 600;
+}
+.hero .hero__container .calendar .calendar-wrapper tr:last-child td:nth-child(3) {
+  color: red;
+  font-size: 25px;
+  font-weight: 600;
 }
 .hero .hero__container .calendar .calendar-wrapper thead td {
   border: none;
@@ -438,6 +447,11 @@ a {
   font-weight: bold;
 }
 .hero .hero__container .calendar .calendar-description {
+  display: flex;
+  flex-direction: column;
+  gap: 22.5px;
+}
+.hero .hero__container .calendar .calendar-description .calendar-description_up {
   max-width: 300px;
   max-height: 150px;
   margin-right: 100px;
@@ -454,15 +468,132 @@ a {
   flex-direction: column;
   gap: 20px;
 }
-.hero .hero__container .calendar .calendar-description .blue_circle, .hero .hero__container .calendar .calendar-description .red_circle {
+.hero .hero__container .calendar .calendar-description .calendar-description_up .blue_circle, .hero .hero__container .calendar .calendar-description .calendar-description_up .red_circle {
   height: 10px;
   width: 10px;
   display: flex;
   gap: 10px;
   align-items: center;
 }
-.hero .hero__container .calendar .calendar-description .blue_circle span, .hero .hero__container .calendar .calendar-description .red_circle span {
+.hero .hero__container .calendar .calendar-description .calendar-description_up .blue_circle span, .hero .hero__container .calendar .calendar-description .calendar-description_up .red_circle span {
   white-space: nowrap;
+}
+.hero .hero__container .calendar .calendar-description .calendar-description_down h4:first-child {
+  font-size: 20px;
+  font-weight: 600;
+}
+.hero .hero__container .calendar .calendar-description .calendar-description_down h4 {
+  display: inline;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19.5px;
+  line-height: 12px;
+  color: #fff;
+}
+.hero .hero__container .calendar .calendar-description .calendar-description_down .tasks {
+  margin-top: 9px;
+  padding: 9px;
+  width: 540px;
+  height: 360px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.hero .hero__container .calendar .calendar-description .calendar-description_down .tasks .tasks_date {
+  display: inline;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15.5px;
+  line-height: 12px;
+  color: #000000;
+}
+.hero .hero__container .calendar .calendar-description .calendar-description_down .tasks .tasks_main {
+  padding-top: 12px;
+  display: flex;
+  gap: 18px;
+}
+.hero .hero__container .calendar .calendar-description .calendar-description_down .tasks .tasks_main .left_task {
+  display: flex;
+  flex-direction: column;
+}
+.hero .hero__container .calendar .calendar-description .calendar-description_down .tasks .tasks_main .left_task .left_btn {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #000;
+}
+.hero .hero__container .calendar .calendar-description .calendar-description_down .tasks .tasks_main .left_task .left_btn p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 10px;
+  color: #000000;
+  padding: 10.5px;
+  background-color: #FF8080;
+  border-radius: 5px;
+}
+.hero .hero__container .calendar .calendar-description .calendar-description_down .tasks .tasks_main .left_task .left_task_main {
+  margin-top: 12px;
+  padding: 7px 155px 235px 7px;
+  background: #81BEFF;
+  border-radius: 5px;
+}
+.hero .hero__container .calendar .calendar-description .calendar-description_down .tasks .tasks_main .left_task .left_task_main span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15.5px;
+  line-height: 12px;
+  color: #000000;
+}
+.hero .hero__container .calendar .calendar-description .calendar-description_down .tasks .tasks_main .right_task .right_btn {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #000;
+}
+.hero .hero__container .calendar .calendar-description .calendar-description_down .tasks .tasks_main .right_task .right_btn p {
+  display: inline-block;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 10px;
+  color: #000000;
+  padding: 10.5px;
+  background-color: #AAD3FF;
+  border-radius: 5px;
+}
+.hero .hero__container .calendar .calendar-description .calendar-description_down .tasks .tasks_main .right_task .leaders {
+  margin-top: 12px;
+  padding: 7px 55px 44px 7px;
+  background: #AAD3FF;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+}
+.hero .hero__container .calendar .calendar-description .calendar-description_down .tasks .tasks_main .right_task .leaders span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15.5px;
+  line-height: 12px;
+  color: #000000;
+  white-space: nowrap;
+}
+.hero .hero__container .calendar .calendar-description .calendar-description_down .tasks .tasks_main .right_task .leaders .leader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  max-width: 200px;
+  border-bottom: 2px solid #000;
+  gap: 35px;
+}
+.hero .hero__container .calendar .calendar-description .calendar-description_down .tasks .tasks_main .right_task .leaders .leader img {
+  height: 50px;
+  width: 50px;
+}
+.hero .hero__container .calendar .calendar-description .calendar-description_down .tasks .tasks_main .right_task .leaders .leader:not(:first-child) {
+  padding-top: 10px;
 }
 .hero .hero__container .user__info {
   display: flex;

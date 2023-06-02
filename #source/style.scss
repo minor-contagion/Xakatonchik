@@ -51,7 +51,7 @@ a {
     position:fixed;
     display: inline-block;
     margin-top: 2.5px;
-    margin-left: -32.5px;
+    margin-left: -50.5px;
     z-index: 101;
     
     cursor: pointer;
@@ -351,7 +351,7 @@ a {
     }
 }
 .hero{
-    padding: 90px 0;
+    padding: 100px 0;
     background-image: url(../img/background.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -374,8 +374,7 @@ a {
         .calendar {
             display: flex;
             margin: 3em auto;
-            justify-content: flex-end;
-            gap: 125px;
+            gap: 75px;
             .calendar-wrapper {
                 width: 360px;
                 padding: 2em;
@@ -389,6 +388,7 @@ a {
                     border-radius: 3px;
                     border-collapse: collapse;
                     color: #444;
+                    
                   }
                   td {
                     height: 48px;
@@ -397,6 +397,16 @@ a {
                     border-right: 1px solid #dcdcff;
                     border-top: 1px solid #dcdcff;
                     width: 14.28571429%;
+                  }
+                  tr:nth-child(2) td:nth-child(2) {
+                    color: #0573DA;
+                    font-size: 25px;
+                    font-weight: 600;
+                  }
+                  tr:last-child td:nth-child(3) {
+                    color: red;
+                    font-size: 25px;
+                    font-weight: 600;
                   }
                   thead td {
                     border: none;
@@ -451,30 +461,157 @@ a {
                     }
               }
             .calendar-description {
-                max-width: 300px;
-                max-height: 150px;
-                margin-right: 100px;
-                width: 360px;
-                background-color: #fff;
-                border-radius: 5.5px;
-                padding: 1.5em;
-
-                font-size: 15px;
-                font-weight: 500;
-                line-height: 25px;
-                color: #4c4c4c;
-                font-family: "Montserrat", sans-serif;
                 display: flex;
                 flex-direction: column;
-                gap: 20px;
-                .blue_circle, .red_circle {
-                    height: 10px;
-                    width: 10px;
+                gap: 22.5px;
+                .calendar-description_up {
+                    max-width: 300px;
+                    max-height: 150px;
+                    margin-right: 100px;
+                    width: 360px;
+                    background-color: #fff;
+                    border-radius: 5.5px;
+                    padding: 1.5em;
+    
+                    font-size: 15px;
+                    font-weight: 500;
+                    line-height: 25px;
+                    color: #4c4c4c;
+                    font-family: "Montserrat", sans-serif;
                     display: flex;
-                    gap: 10px;
-                    align-items: center;
-                    span {
-                        white-space: nowrap;
+                    flex-direction: column;
+                    gap: 20px;
+                    .blue_circle, .red_circle {
+                        height: 10px;
+                        width: 10px;
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        span {
+                            white-space: nowrap;
+                        }
+                    }
+                }
+                .calendar-description_down {
+                h4:first-child {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                    h4 {
+                        display: inline;
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 19.5px;
+                        line-height: 12px;
+                        color: #fff;
+                    }
+                    .tasks {
+                        margin-top: 9px;
+                        padding: 9px; 
+                        width: 540px;
+                        height: 360px;
+                        background-color: #fff;
+                        border-radius: 5px; 
+                        .tasks_date {
+                            display: inline;
+                            font-family: 'Montserrat';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 15.5px;
+                            line-height: 12px;
+
+                            color: #000000;
+                        }
+                        .tasks_main {
+                            padding-top: 12px;
+                            display: flex;
+                            gap: 18px;
+                            .left_task {
+                                display: flex;
+                                flex-direction: column;
+                                .left_btn {
+                                    p {
+                                        font-family: 'Montserrat';
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 13px;
+                                    line-height: 10px;
+                                    color: #000000;
+                                    padding: 10.5px;
+                                    background-color: #FF8080;
+                                    border-radius: 5px;
+                                    }
+                                    padding-bottom: 10px;
+                                    border-bottom: 2px solid #000;
+                                }
+                                .left_task_main {
+                                    margin-top: 12px;
+                                    padding: 7px 155px 235px 7px;
+                                    background: #81BEFF;
+                                    border-radius: 5px;
+                                    span {
+                                        font-family: 'Montserrat';
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        font-size: 15.5px;
+                                        line-height: 12px;
+                                        color: #000000;
+                                    }
+                                }
+                            }
+                            .right_task {
+                                .right_btn {
+                                    p {
+                                        display: inline-block;
+                                        font-family: 'Montserrat';
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 13px;
+                                    line-height: 10px;
+                                    color: #000000;
+                                    padding: 10.5px;
+                                    background-color: #AAD3FF;
+                                    border-radius: 5px;
+                                    }
+                                    padding-bottom: 10px;
+                                    border-bottom: 2px solid #000;
+                                }
+                                .leaders {
+                                    margin-top: 12px;
+                                    padding: 7px 55px 44px 7px;
+                                    background: #AAD3FF;
+                                    border-radius: 5px;
+                                    text-align: center;
+                                    align-items: center;
+                                    span {
+                                        font-family: 'Montserrat';
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        font-size: 15.5px;
+                                        line-height: 12px;
+                                        color: #000000;
+                                        white-space: nowrap;
+                                    }
+                                    .leader {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        padding-bottom: 10px;
+                                        max-width: 200px;
+                                        border-bottom: 2px solid #000;
+                                        gap: 35px;
+                                        img {
+                                            height: 50px;
+                                            width: 50px;
+                                        }
+                                    }
+                                    .leader:not(:first-child) {
+                                        padding-top: 10px;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
