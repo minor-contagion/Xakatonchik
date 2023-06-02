@@ -13,7 +13,50 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
+        
+        <div class="container header__container">
+            <div class="leftSiteBar">
+                <div class="burger__leftSiteBar burger">
+                    <span class="burger__item"></span>
+                </div>
+                <div class="tools__leftSiteBar tool">
+                   <ul class="tool-items">
+                    <li class="tool-item">
+                        <img class ="tool-item__top-line" src="img/Line.svg" alt="line">
+                    </li>
+                    <li class="tool-item item_calendar">
+                        <a  class="tool-item__calendar" href="#"><img src="img/Calendar.svg" alt="Calendar"></a>
+                    </li>
+                    <li class="tool-item item_task">
+                        <a  class="tool-item__task" href="#"><img src="img/carbon_task.svg" alt="Task"></a>
+                    </li>
+                    <li class="tool-item item_shopping-bag">
+                        <a  class="tool-item__shopping-bag" href="#"><img src="img/shopping-bag.svg" alt="Shopping-bag"></a>
+                    </li>
+                    <li class="tool-item item_share">
+                        <a  class="tool-item__share" href="#"><img src="img/share.svg" alt="Share"></a>
+                    </li>
+                    <li class="tool-item item_people-team">
+                        <a  class="tool-item__people-team" href="#"><img src="img/people-team.svg" alt="People-team"></a>
+                    </li>
+                    <li class="tool-item item_target">
+                        <a  class="tool-item__target" href="#"><img src="img/target.svg" alt="Target"></a>
+                    </li>
+                    <li class="tool-item item_fluent-data">
+                        <a  class="tool-item__fluent_data" href="#"><img src="img/fluent_data.svg" alt="Fluent_data"></a>
+                    </li>
+                    <li class="tool-item item_row">
+                        <a  class="tool-item__row" href="#"><img src="img/row.svg" alt="row"></a>
+                    </li>
+                    <li class="tool-item">
+                        <img class ="tool-item__bottom-line" src="img/Line.svg" alt="line">
+                    </li>
+                    <li class="tool-item item_settings">
+                        <a  class="tool-item__settings" href="#"><img src="img/settings.svg" alt="settings"></a>
+                    </li>
+                   </ul>
+                </div>
+            </div>
             <div class="nav">
                 <div class="logo"><a href="#"><img class="logo-img" src="img/logo.svg" alt="logo"></a></div>
                 <div class="realTime">
@@ -27,13 +70,38 @@
                             <div class="block-text-top">
                                 <span id ="user_name">User</span>
                                 <span id ="user_sample">Sample 3</span>
-                            </div> </br>
+                            </div>
                             <div class="block-text-bottom">
                                 <a href="" class="text-bottom">Top manager</a>
                             </div>
                         </div>
                         <div class="info-block-images">
-                            <div class="bookmark"><a href=""><img src="img/bookmark.svg" alt=""></a></div>
+                            <div class="bookmark" onclick="return false"><a href=""><img src="img/bookmark.svg" alt=""></a></div>
+                            <a href="#">
+                                <div id="triangle-black"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="invite">
+                    <div class="invite-inv">
+                        <span>Пригласить</span>
+                    </div>
+                    <div id="triangle-white"></div>
+                </div>
+                <div class="search">
+                    <a href="#">
+                        <img src="img/search.svg" alt="icon for search">
+                    </a>
+                    <form action="" class="contacts__box">
+                        <div class="input__box">
+                            <input type="text" required>
+                            <label for="">Поиск</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="lang"><span>ru/by/en</span></div>
+                <div class="help"><a href="#"><img src="img/help.svg" alt=""></a></div>
                         </div>
                     </div>
                 </div>
@@ -126,4 +194,10 @@
 </body>
 <script src="js/script.js"></script>
 <script src="js/index.js"></script>
+<script>
+    document.querySelector('.burger').addEventListener('click', function () {
+        this.classList.toggle('active');
+        document.querySelector('.tool').classList.toggle('open');
+    })
+</script>
 </html>

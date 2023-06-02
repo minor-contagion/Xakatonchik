@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   scroll-behavior: smooth;
 }
@@ -40,49 +41,299 @@ a {
   left: 0;
   top: 0;
   width: 100%;
+  align-items: center;
 }
-.header .nav {
+.header .header__container {
+  /*left site bar*/
+  /* тут класс опен для выкатывания меню при нажатии */
+  /* Анимация меню-бургера */
+}
+.header .header__container .leftSiteBar {
+  position: fixed;
+  display: inline-block;
+  margin-top: 2.5px;
+  margin-left: -32.5px;
+  z-index: 101;
+  cursor: pointer;
+}
+.header .header__container .leftSiteBar ul, .header .header__container .leftSiteBar li {
+  list-style: none;
+}
+.header .header__container .burger {
+  display: flex;
+  position: relative;
+  z-index: 50;
+  align-items: center;
+  width: 26px;
+  height: 18px;
+  margin-top: 26px;
+  margin-bottom: 17px;
+}
+.header .header__container .burger__item {
+  height: 2px;
+  width: 100%;
+  transform: scale(1);
+  background-color: #fff;
+}
+.header .header__container .burger::before,
+.header .header__container .burger::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transition: all 0.3s ease 0s;
+}
+.header .header__container .burger::before {
+  top: 0;
+}
+.header .header__container .burger::after {
+  bottom: 0;
+}
+.header .header__container .burger.active .burger__item {
+  transform: scale(0);
+}
+.header .header__container .burger.active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+.header .header__container .burger.active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+.header .header__container .tool-item:not(:last-child) {
+  margin-bottom: 14px;
+}
+.header .header__container .tool-items {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.header .header__container .tool-item {
+  border-radius: 3px;
+}
+.header .header__container .item_calendar:hover,
+.header .header__container .item_task:hover,
+.header .header__container .item_shopping-bag:hover,
+.header .header__container .item_share:hover,
+.header .header__container .item_people-team:hover,
+.header .header__container .item_target:hover,
+.header .header__container .item_fluent-data:hover,
+.header .header__container .item_row:hover,
+.header .header__container .item_settings:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.header .header__container .tool {
+  display: none;
+  animation: burgerAnimation 0.4s;
+}
+.header .header__container .open {
+  display: flex !important;
+}
+@keyframes burgerAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.header .header__container .nav {
   display: flex;
   justify-content: space-between;
-  padding-top: 12px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #000000;
+  padding-top: 20px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #ffffff;
 }
-.header .nav .logo {
+.header .header__container .nav #triangle-white {
+  margin-top: 2px;
+  width: 0;
+  height: 0;
+  margin-left: 7px;
+  border-top: 10px solid #ffffff;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+.header .header__container .nav .logo {
   padding-top: 6px;
 }
-.header .nav .realTime {
+.header .header__container .nav .realTime {
   padding-top: 8px;
 }
-.header .nav .realTime #time_now {
+.header .header__container .nav .realTime #time_now {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   line-height: 26px;
   font-size: 20px;
+  color: #fff;
 }
-.header .nav .user_info {
+.header .header__container .nav .user_info {
   display: flex;
   justify-content: space-between;
   text-align: center;
+  gap: 8px;
 }
-.header .nav .user_info .user_info-logo {
+.header .header__container .nav .user_info .user_info-logo {
   max-block-size: 34px;
   justify-content: center;
 }
-.header .nav .user_info .user_info-block .user_info-block-text {
+.header .header__container .nav .user_info .user_info-logo img {
+  width: 40px;
+  height: 40px;
+}
+.header .header__container .nav .user_info .user_info-block {
+  display: flex;
+  gap: 7px;
+  padding: 3.5px 5px;
+  margin-top: 3.5px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.header .header__container .nav .user_info .user_info-block .user_info-block-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.header .header__container .nav .user_info .user_info-block .user_info-block-text .block-text-top {
   display: flex;
   justify-content: space-between;
-  text-align: center;
-  max-width: 112px;
-  max-height: 25px;
+  align-items: center;
 }
-.header .nav .user_info .user_info-block .user_info-block-text .user_name {
-  font-size: 10px;
+.header .header__container .nav .user_info .user_info-block .user_info-block-text .block-text-top #user_name {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15.5px;
+  line-height: 12px;
+  color: #000000;
 }
-.header .nav .user_info .user_info-block .user_info-block-text .info-block-images {
+.header .header__container .nav .user_info .user_info-block .user_info-block-text .block-text-top #user_sample {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9.5px;
+  line-height: 6px;
+  color: #001663;
+}
+.header .header__container .nav .user_info .user_info-block .user_info-block-text .block-text-bottom .text-bottom {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15.5px;
+  line-height: 11px;
+  color: #0573DA;
+}
+.header .header__container .nav .user_info .user_info-block .info-block-images {
   display: flex;
   align-items: center;
+  gap: 7px;
+}
+.header .header__container .nav .user_info .user_info-block .info-block-images .bookmark {
+  width: 18px;
+  height: 18px;
+  background: #387CFF;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+.header .header__container .nav .user_info .user_info-block .info-block-images .bookmark:active {
+  background: #ff3838;
+}
+.header .header__container .nav .user_info .user_info-block .info-block-images .bookmark:not(:active) {
+  transition: background-color 100000ms step-end;
+}
+.header .header__container .nav .user_info .user_info-block .info-block-images #triangle-black {
+  width: 0;
+  height: 0;
+  margin-top: 2px;
+  border-top: 10px solid #000000;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+.header .header__container .nav .invite {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin-top: 3.5px;
+  background-color: #0048A8;
+}
+.header .header__container .nav .invite span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15.5px;
+  line-height: 11px;
+  color: #FFFFFF;
+}
+.header .header__container .nav .search {
+  display: flex;
+  align-items: center;
+  padding: 3px 60px 3px 5px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  gap: 7.5px;
+}
+.header .header__container .nav .search img {
+  width: 15px;
+  height: 15px;
+}
+.header .header__container .nav .search span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15.5px;
+  line-height: 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+.header .header__container .nav .search .contacts__box .input__box {
+  border-bottom: 1px solid #dad2e3;
+  position: relative;
+}
+.header .header__container .nav .search .contacts__box .input__box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15.5px;
+  line-height: 12px;
+  color: rgba(0, 0, 0, 0.65);
+  transition: 0.5s;
+}
+.header .header__container .nav .search .contacts__box .input__box input:focus ~ label,
+.header .header__container .nav .search .contacts__box .input__box input:valid ~ label {
+  top: -0.5px;
+  left: 110px;
+}
+.header .header__container .nav .search .contacts__box .input__box input {
+  width: 115px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15.5px;
+  line-height: 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+.header .header__container .nav .lang {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #FFFFFF;
+  margin-top: 8px;
+}
+.header .header__container .nav .help {
+  margin-top: 7px;
 }
 
 .hero {
@@ -100,7 +351,7 @@ a {
   font-size: 28px;
   line-height: 29px;
   letter-spacing: 0.025em;
-  color: #c6c3c3;
+  color: #fff;
   padding: 10px 30px;
   background-color: rgba(8, 49, 136, 0.4509803922);
   display: inline;
@@ -117,7 +368,7 @@ a {
   padding: 2em;
   border: 1px solid #dcdcff;
   border-radius: 5px;
-  background: #e8e7e7;
+  background: #fff;
 }
 .hero .hero__container .calendar .calendar-wrapper table {
   clear: both;
@@ -191,7 +442,7 @@ a {
   max-height: 150px;
   margin-right: 100px;
   width: 360px;
-  background-color: #e8e7e7;
+  background-color: #fff;
   border-radius: 5.5px;
   padding: 1.5em;
   font-size: 15px;
